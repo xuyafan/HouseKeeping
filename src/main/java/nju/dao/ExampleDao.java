@@ -1,6 +1,6 @@
-package nju.xyf.dao;
+package nju.dao;
 
-import nju.xyf.model.ExampleData;
+import nju.model.ExampleData;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ExampleDao extends JpaRepository<ExampleData, Integer> {

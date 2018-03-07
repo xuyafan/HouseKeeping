@@ -1,4 +1,4 @@
-package nju.xyf.model;
+package nju.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

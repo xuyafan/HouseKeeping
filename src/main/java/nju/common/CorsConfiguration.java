@@ -1,4 +1,4 @@
-package nju.xyf.configure;
+package nju.common;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

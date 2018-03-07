@@ -1,7 +1,9 @@
-package nju.xyf.web;
+package nju.xyf.ctrl;
 
-import nju.xyf.constants.ErrorCode;
-import nju.xyf.model.ExampleData;
+import nju.common.ErrorCode;
+import nju.model.ExampleData;
+
+import nju.common.Response;
 import nju.xyf.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,22 +21,19 @@ public class TeacherCtrl {
     TeacherService teacherService;
 
 
-
-
-
     @RequestMapping(value = "/teacher/login", method = RequestMethod.POST)
     public String login(HttpServletRequest request, @RequestParam(name = "email") String email,
-                                             @RequestParam(name = "password") String password) {
-        String sessionId =request.getSession().getId();
+                        @RequestParam(name = "password") String password) {
+        String sessionId = request.getSession().getId();
 
-        ExampleData teacher = teacherService.login(email, password,sessionId);
-        if(teacher!=null){
-            return  new Response<ExampleData>().getBuilder()
+        ExampleData teacher = teacherService.login(email, password, sessionId);
+        if (teacher != null) {
+            return new Response<ExampleData>().getBuilder()
                     .succ()
                     .data(teacher)
                     .build();
-        }else {
-            return  new Response<Void>().getBuilder()
+        } else {
+            return new Response<Void>().getBuilder()
                     .failBuild(ErrorCode.NOT_FOUND);
         }
 

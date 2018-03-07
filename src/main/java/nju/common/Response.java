@@ -1,4 +1,4 @@
-package nju.xyf.web;
+package nju.common;
 
 import com.google.gson.Gson;
 

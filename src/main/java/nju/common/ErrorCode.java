@@ -1,4 +1,4 @@
-package nju.xyf.constants;
+package nju.common;
 
 
 public class ErrorCode {

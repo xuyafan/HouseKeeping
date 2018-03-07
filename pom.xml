@@ -76,7 +76,7 @@
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <configuration>
                         <fork>true</fork>
-                        <mainClass>nju.xyf.Application</mainClass>
+                        <mainClass>nju.Application</mainClass>
                     </configuration>
                     <executions>
                         <execution>
@@ -93,7 +93,7 @@
                         <archive>
                             <manifest>
                                 <addClasspath>true</addClasspath>
-                                <mainClass>nju.xyf.Application</mainClass>
+                                <mainClass>nju.Application</mainClass>
                             </manifest>
                         </archive>
                         <descriptorRefs>

@@ -1,6 +1,6 @@
-package nju.xyf.dao;
+package nju.dao;
 
-import nju.xyf.model.StoreData;
+import nju.model.StoreData;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface StoreDao extends JpaRepository<StoreData, Integer> {

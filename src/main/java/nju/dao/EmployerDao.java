@@ -1,6 +1,6 @@
-package nju.xyf.dao;
+package nju.dao;
 
-import nju.xyf.model.EmployerData;
+import nju.model.EmployerData;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EmployerDao extends JpaRepository<EmployerData, Integer> {
