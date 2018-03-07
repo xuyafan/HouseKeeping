@@ -1,7 +1,7 @@
 package nju.xyf.service;
 
-import nju.xyf.dao.ExampleDao;
-import nju.xyf.model.ExampleData;
+import nju.dao.ExampleDao;
+import nju.model.ExampleData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
 package nju.xyf.service;
 
-import nju.xyf.model.ExampleData;
+import nju.model.ExampleData;
 
 
 public interface TeacherService {
