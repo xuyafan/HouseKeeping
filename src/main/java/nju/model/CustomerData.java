@@ -6,11 +6,11 @@ import java.util.Date;
 
 
 @Entity
-@Table(name = "employer")
-public class EmployerData {
+@Table(name = "customer")
+public class CustomerData {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
 
     @NotNull
     @Column(name = "name")
@@ -24,11 +24,31 @@ public class EmployerData {
     @Column(name = "phone")
     private String phone;
 
-    public int getId() {
+    @NotNull
+    @Column(name = "email")
+    private String email;
+
+    @NotNull
+    @Column(name = "password")
+    private String password;
+
+
+    public CustomerData() {
+    }
+
+    public CustomerData(String name, String gender, String email, String phone, String password) {
+        this.name = name;
+        this.gender = gender;
+        this.email = email;
+        this.phone = phone;
+        this.password = password;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -54,5 +74,21 @@ public class EmployerData {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

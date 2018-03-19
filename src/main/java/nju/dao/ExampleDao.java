@@ -3,7 +3,7 @@ package nju.dao;
 import nju.model.ExampleData;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface ExampleDao extends JpaRepository<ExampleData, Integer> {
+public interface ExampleDao extends JpaRepository<ExampleData, Long> {
 
     ExampleData findByEmailAndPassword(String email, String password);
 

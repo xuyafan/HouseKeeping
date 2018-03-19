@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 public class RecordData {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
 
 
     @NotNull
@@ -37,6 +37,8 @@ public class RecordData {
     @Column(name = "recordDescription")
     private String recordDescription;
 
+
+
     /**
      订单详细信息
 
@@ -48,11 +50,11 @@ public class RecordData {
 
      */
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

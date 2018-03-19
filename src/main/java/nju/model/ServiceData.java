@@ -5,32 +5,35 @@ import javax.validation.constraints.NotNull;
 
 /**
 * author: xuyafan
-* description: 店面 实体类
+* description: 客服 实体类
+ *
 */
 @Entity
-@Table(name = "store")
-public class StoreData {
+@Table(name = "service")
+public class ServiceData {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-
     @NotNull
     @Column(name = "name")
-    private String name; //店面名称
+    private String name;
 
+    @NotNull
+    @Column(name = "gender")
+    private String gender;
 
-    @Column(name = "address")
-    private String address; //地址
-
+    @NotNull
+    @Column(name = "age")
+    private String age;
 
     @NotNull
     @Column(name = "phone")
-    private String phone; //联系电话
+    private String phone;
 
     @NotNull
-    @Column(name = "staffId")
-    private Integer staffId; //负责员工id
+    @Column(name = "home")
+    private String home; //籍贯
 
     public Long getId() {
         return id;
@@ -48,12 +51,20 @@ public class StoreData {
         this.name = name;
     }
 
-    public String getAddress() {
-        return address;
+    public String getGender() {
+        return gender;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
     }
 
     public String getPhone() {
@@ -64,11 +75,11 @@ public class StoreData {
         this.phone = phone;
     }
 
-    public Integer getStaffId() {
-        return staffId;
+    public String getHome() {
+        return home;
     }
 
-    public void setStaffId(Integer staffId) {
-        this.staffId = staffId;
+    public void setHome(String home) {
+        this.home = home;
     }
 }

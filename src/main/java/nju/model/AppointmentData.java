@@ -13,7 +13,7 @@ import java.util.Date;
 public class AppointmentData {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Long id;
 
 
     @NotNull
@@ -36,6 +36,8 @@ public class AppointmentData {
     @Column(name = "appointmentDescription")
     private String appointmentDescription; //预约说明
 
+
+
     /**orderDescription 说明
      * {
      "服务内容": "做饭-做家务-照顾自理老人",
@@ -48,15 +50,15 @@ public class AppointmentData {
      }
      */
 
-
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
+
+
 
     public Integer getEmployerId() {
         return employerId;
