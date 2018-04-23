@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 
 @RestController
 public class EmployerCtrl {
@@ -35,6 +36,7 @@ public class EmployerCtrl {
             return new Response<Void>().getBuilder()
                     .failBuild(ErrorCode.NOT_FOUND);
         }
+
 
     }
 

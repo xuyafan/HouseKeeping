@@ -1,0 +1,55 @@
+{
+  "code": 0,
+  "message": "OK",
+  "data": [
+    {
+      "id":1,
+      "title":"保洁服务",
+      "imageUrl":"https://static.daojia.com/changsha/website-pc/new-juhe/images/advantage-1.jpg",
+      "type":"家政"
+    },
+    {
+      "id":2,
+      "title":"清洗服务",
+      "imageUrl":"https://static.daojia.com/changsha/website-pc/new-juhe/images/advantage-1.jpg",
+      "type":"家政"
+    },
+    {
+      "id":3,
+      "title":"维修换新",
+      "imageUrl":"https://static.daojia.com/changsha/website-pc/new-juhe/images/advantage-1.jpg",
+      "type":"家政"
+    },
+    {
+      "id":4,
+      "title":"保姆",
+      "imageUrl":"https://static.daojia.com/changsha/website-pc/new-juhe/images/advantage-1.jpg",
+      "type":"保姆"
+    },
+    {
+      "id":5,
+      "title":"月嫂",
+      "imageUrl":"https://static.daojia.com/changsha/website-pc/new-juhe/images/advantage-1.jpg",
+      "type":"保姆"
+    },
+    {
+      "id":6,
+      "title":"育儿嫂",
+      "imageUrl":"https://static.daojia.com/changsha/website-pc/new-juhe/images/advantage-1.jpg",
+      "type":"保姆"
+    },
+    {
+      "id":7,
+      "title":"母婴知识",
+      "imageUrl":"https://static.daojia.com/changsha/website-pc/new-juhe/images/advantage-1.jpg",
+      "type":"知识"
+    },
+    {
+      "id":8,
+      "title":"家政价格",
+      "imageUrl":"https://static.daojia.com/changsha/website-pc/new-juhe/images/advantage-1.jpg",
+      "type":"知识"
+    }
+
+  ]
+}
