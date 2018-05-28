@@ -3,14 +3,10 @@ package nju.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-/**
-* author: xuyafan
-* description: 客服 实体类
- *
-*/
+
 @Entity
-@Table(name = "service")
-public class ServiceData {
+@Table(name = "user")
+public class UserData {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -19,24 +15,28 @@ public class ServiceData {
     private String avatar;  //头像
 
     @NotNull
-    @Column(name = "name")
-    private String name;
+    @Column(name = "username")
+    private String username;
 
     @NotNull
+    @Column(name = "password")
+    private String password;
+
+
     @Column(name = "gender")
     private String gender;
 
-    @NotNull
-    @Column(name = "age")
-    private String age;
 
-    @NotNull
     @Column(name = "phone")
     private String phone;
 
-    @NotNull
-    @Column(name = "home")
-    private String home; //籍贯
+    public UserData(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public UserData() {
+    }
 
     public Integer getId() {
         return id;
@@ -46,12 +46,12 @@ public class ServiceData {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getGender() {
@@ -62,14 +62,6 @@ public class ServiceData {
         this.gender = gender;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
     public String getPhone() {
         return phone;
     }
@@ -78,12 +70,13 @@ public class ServiceData {
         this.phone = phone;
     }
 
-    public String getHome() {
-        return home;
+
+    public String getPassword() {
+        return password;
     }
 
-    public void setHome(String home) {
-        this.home = home;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getAvatar() {

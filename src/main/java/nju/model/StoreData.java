@@ -4,15 +4,15 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 /**
-* author: xuyafan
-* description: 店面 实体类
-*/
+ * author: xuyafan
+ * description: 店面 实体类
+ */
 @Entity
 @Table(name = "store")
 public class StoreData {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
 
 
     @NotNull
@@ -32,11 +32,11 @@ public class StoreData {
     @Column(name = "staffId")
     private Integer staffId; //负责员工id
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

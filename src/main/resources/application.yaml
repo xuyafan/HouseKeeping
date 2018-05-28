@@ -3,7 +3,7 @@ spring.profiles.active: dev
 # 综合配置
 spring:
     datasource:
-        driver-class-name: com.mysql.jdbc.Driver
+        driver-class-username: com.mysql.jdbc.Driver
 
     # Show or not log for each sql query
     # auto :validate or update

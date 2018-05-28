@@ -1,42 +1,41 @@
-package nju.model;
+package nju.xyf.request;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import nju.model.ServiceData;
 
 /**
-* author: xuyafan
-* description: 客服 实体类
- *
-*/
-@Entity
-@Table(name = "service")
-public class ServiceData {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+ * author： xuyafan
+ * description:
+ */
+public class Service {
+
+
     private Integer id;
 
-    @Column(name = "avatar")
     private String avatar;  //头像
 
-    @NotNull
-    @Column(name = "name")
+
     private String name;
 
-    @NotNull
-    @Column(name = "gender")
+
     private String gender;
 
-    @NotNull
-    @Column(name = "age")
+
     private String age;
 
-    @NotNull
-    @Column(name = "phone")
+
     private String phone;
 
-    @NotNull
-    @Column(name = "home")
     private String home; //籍贯
+
+    public Service(ServiceData data) {
+        this.id = data.getId();
+        this.avatar = data.getAvatar();
+        this.name = data.getName();
+        this.gender = data.getGender();
+        this.age = data.getAge();
+        this.phone = data.getPhone();
+        this.home = data.getHome();
+    }
 
     public Integer getId() {
         return id;
@@ -44,6 +43,14 @@ public class ServiceData {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     public String getName() {
@@ -84,13 +91,5 @@ public class ServiceData {
 
     public void setHome(String home) {
         this.home = home;
-    }
-
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
     }
 }

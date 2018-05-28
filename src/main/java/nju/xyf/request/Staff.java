@@ -1,81 +1,64 @@
-package nju.model;
+package nju.xyf.request;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import nju.model.StaffData;
 
 /**
- * 家政人员实体类（保姆，月嫂，家政等）
+ * author： xuyafan
+ * description:
  */
-@Entity
-@Table(name = "staff")
-public class StaffData {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+public class Staff {
 
-
-    @NotNull
-    @Column(name = "imgUrl")
-    private String imgUrl; //头像url
-
-    @NotNull
-    @Column(name = "number")
-    private String number; //工号
-
-    @NotNull
-    @Column(name = "name")
-    private String name; //姓名
-
-    @NotNull
-    @Column(name = "gender")
+    private int id;
+    private String imgUrl;
+    private String name;
+    private String age;
+    private String number;//工号
+    private String home;//籍贯
     private String gender; //性别
-
-    @NotNull
-    @Column(name = "age")
-    private String age; //年龄
-
-    @NotNull
-    @Column(name = "phone")
     private String phone; //联系方式
-
-    @NotNull
-    @Column(name = "home")
-    private String home; //籍贯
-
-    @NotNull
-    @Column(name = "serviceType")
     private String serviceType; //服务类型
-
-    @NotNull
-    @Column(name = "star")
     private String star; //星级
-
-    @NotNull
-    @Column(name = "payRequired")
     private String payRequired; //薪酬报价
-
-    @NotNull
-    @Column(name = "exp")
     private String exp; //工作经验
-
-
-    @Column(name = "serviceCount")
     private String serviceCount; //服务户数
-
-
-    @Column(name = "appointmentCount")
     private String appointmentCount; //预约户数
-
-
-    @Column(name = "comment")
     private String comment; //综合评论
 
-    public Integer getId() {
+    public Staff() {
+    }
+
+    public Staff(StaffData data) {
+        this.id = data.getId();
+        this.imgUrl = data.getImgUrl();
+        this.name = data.getName();
+        this.age = data.getAge();
+        this.number = data.getNumber();
+        this.home = data.getHome();
+        this.gender = data.getGender();
+        this.phone = data.getPhone();
+        this.serviceType = data.getServiceType();
+        this.star = data.getStar();
+        this.payRequired = data.getPayRequired();
+        this.exp = data.getExp();
+        this.serviceCount = data.getServiceCount();
+        this.appointmentCount = data.getAppointmentCount();
+        this.comment = data.getComment();
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public String getName() {
@@ -86,14 +69,6 @@ public class StaffData {
         this.name = name;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
     public String getAge() {
         return age;
     }
@@ -102,12 +77,12 @@ public class StaffData {
         this.age = age;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getNumber() {
+        return number;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     public String getHome() {
@@ -116,6 +91,22 @@ public class StaffData {
 
     public void setHome(String home) {
         this.home = home;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getServiceType() {
@@ -172,21 +163,5 @@ public class StaffData {
 
     public void setComment(String comment) {
         this.comment = comment;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
     }
 }
